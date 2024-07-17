@@ -1,7 +1,16 @@
 package patterns.singletone;
 
-public class Singletone {
-    Singletone singletone;
-    private Singletone() {}
-    private static void 
+public class Person {
+    private static Person person;
+
+    private Person() {}
+
+    public static Person getPerson(){
+        if(person == null){
+            person = new Person();
+        }
+
+        return person;
+    }
+
 }
